@@ -1,6 +1,8 @@
 /** @type {import('jest').Config} */
 module.exports = {
-  preset: 'ts-jest',
+  transform: {
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.build.json' }]
+  },
   testMatch: ['**/?(*.)+(spec|test).[t]s?(x)'],
   modulePaths: [
     '<rootDir>',
